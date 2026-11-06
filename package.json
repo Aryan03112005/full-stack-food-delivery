@@ -5,6 +5,8 @@
     "build": "npm --prefix frontend run build"
   },
   "dependencies": {
-    "react-router-dom": "^7.18.4"
+    "axios": "^1.21.0",
+    "react-router-dom": "^7.18.5",
+    "react-toastify": "^11.2.0"
   }
 }
