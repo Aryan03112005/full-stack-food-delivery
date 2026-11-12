@@ -2,6 +2,22 @@
 
 A full-stack food delivery web application built using the MERN stack. It provides a customer-facing website for browsing food, managing carts, placing orders and making payments, along with an admin panel for managing food items and orders.
 
+## Screenshots
+
+### Customer Homepage
+![Homepage](screenshots/home.png)
+
+### Shopping Cart
+![Shopping Cart](screenshots/cartpage.png)
+
+### Checkout Page
+![Checkout](screenshots/checkoutpage.png)
+
+### Admin Panel
+![Admin Panel](screenshots/admin.png)
+
+### My Orders
+![My Orders](screenshots/myorderpage.png)
 ## Features
 
 ### Customer Frontend
