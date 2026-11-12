@@ -1,8 +1,10 @@
 
-import React, { useContext,  useState } from 'react'
+import React, { useContext,  useEffect,  useState } from 'react'
 import './PlaceOrder.css'
 import axios from 'axios';
 import { StoreContext } from '../../context/StoreContext'
+import { useNavigate } from 'react-router-dom';
+
 
 const PlaceOrder = () => {
   const { getTotalCartAmount, token, food_list, cartItems, url } = useContext(StoreContext);
@@ -51,7 +53,15 @@ const PlaceOrder = () => {
     alert(error.response?.data?.message || "Something went wrong");
   }
 };
-
+//feature so that when logged out cart  page not visible
+  const navigate=useNavigate();
+   const totalAmount = getTotalCartAmount();
+   
+  useEffect(() => {
+    if (!token || totalAmount === 0) {
+      navigate('/cart');
+    }
+  }, [token, totalAmount]);
 
   return (
     <form onSubmit={placeOrder} className="place-order">
